@@ -17,7 +17,7 @@ const Header = () => {
                         <div className="header__main ul_li_between">
                             <div className="header__left ul_li">
                                 <div className="header__logo">
-                                    <Link to="/"><img src="/assets/img/logo/logo-2.svg" alt="" /></Link>
+                                    <Link to="/"><img src="/assets/img/logo/aya.logo.icon.png" className="nav-logo" alt="aya" /></Link>
                                 </div>
                             </div>
                             <div className="main-menu__wrap ul_li navbar navbar-expand-lg">
