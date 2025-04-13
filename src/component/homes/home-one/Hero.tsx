@@ -8,9 +8,10 @@ const Hero = () => {
             <div className="row align-items-center">
                <div className="col-lg-7">
                   <div className="blockchain-hero__content position-relative z-1"> 
-                     <h1 className="title text-80 mb-35 -tracking-2/4">AYA <br /> protocol presale</h1>
+                     <h1 className="title text-80 mb-25 -tracking-2/4">AYA <br /> protocol presale</h1>
 
                      <p className="mb-50 text-20 leading-30">Your guiding spirit….</p>
+                     <h4 className="pt-35 text-65 lh-lg">Innovative AI Agent for Crypto Trading, <br />Market Insights & Mindset Mastery</h4>
                      {/* <div className="btns">
                         <Link className="blc-btn" to="#">get started</Link>
                         <Link className="blc-btn blc-btn--white" to="#">white paper</Link>
