@@ -9,6 +9,7 @@ import Roadmap from "./Roadmap"
 import Solution from "./Solution"
 import Token from "./Token"
 import UserOption from "./UserOption"
+import Intro from "./Intro"
 
 const HomeOne = () => {
   return (
@@ -16,6 +17,7 @@ const HomeOne = () => {
       <div className="body_wrap">
         <Header />
         <Hero />
+        <Intro />
         <UserOption />
         <About />
         <Solution />
