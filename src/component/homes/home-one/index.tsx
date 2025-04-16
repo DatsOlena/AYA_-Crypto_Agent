@@ -1,17 +1,15 @@
 import FooterOne from "../../../layouts/footers/FooterOne"
 import Header from "../../../layouts/headers/Header"
 import About from "./About"
-import Advantages from "./Advantages"
 import Brand from "./Brand"
 import Distribution from "./Distribution"
 import FaqArea from "./FaqArea"
 import Hero from "./Hero"
 import Roadmap from "./Roadmap"
 import Solution from "./Solution"
-import Team from "./Team"
 import Token from "./Token"
-import TokenUpdate from "./TokenUpdate"
 import UserOption from "./UserOption"
+import Intro from "./Intro"
 
 const HomeOne = () => {
   return (
@@ -19,13 +17,11 @@ const HomeOne = () => {
       <div className="body_wrap">
         <Header />
         <Hero />
+        <Intro />
         <UserOption />
         <About />
-        <Advantages />
         <Solution />
-        <TokenUpdate />
         <Token />
-        <Team />
         <Distribution />
         <Roadmap />
         <FaqArea />

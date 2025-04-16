@@ -36,29 +36,11 @@ const menu_data: MenuItem[] = [
         link: "/#feature",
     },
     {
-        id: 3,
-        page: "home_1",
-        has_dropdown: false,
-        title: "Team",
-        link: "/#team",
-    },
-    {
         id: 4,
         page: "home_1",
         has_dropdown: false,
         title: "Roadmap",
         link: "/#roadmap",
-    },
-    {
-        id: 5,
-        page: "home_1",
-        has_dropdown: true,
-        title: "Blog",
-        link: "#",
-        sub_menus: [
-            { link: "/blog", title: "Blog" },
-            { link: "/blog-single", title: "Blog Details", },
-        ],
     },
     {
         id: 6,
