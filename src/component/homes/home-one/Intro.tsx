@@ -1,23 +1,51 @@
+import { useEffect, useRef, useState } from "react";
+
 const Intro = () => {
+   const videoRef = useRef<HTMLVideoElement | null>(null);
+   const [isReversing, setIsReversing] = useState<boolean>(false);
+   const reverseIntervalRef = useRef<number | null>(null);
+ 
+   useEffect(() => {
+     const video = videoRef.current;
+ 
+     const handleEnded = () => {
+      if (!video) return;
+       setIsReversing(true);
+       video.pause();
+ 
+       reverseIntervalRef.current = setInterval(() => {
+         if (!videoRef.current) return;
+
+         if (video.currentTime <= 0) {
+            if (reverseIntervalRef.current !== null) {
+               clearInterval(reverseIntervalRef.current);
+             }
+           setIsReversing(false);
+           video.play(); // Start playing forward again
+         } else {
+           video.currentTime -= 0.05;
+         }
+       }, 50);
+     };
+     if (!video) return;
+     video.addEventListener("ended", handleEnded);
+ 
+     return () => {
+       video.removeEventListener("ended", handleEnded);
+       if (reverseIntervalRef.current !== null) {
+         clearInterval(reverseIntervalRef.current);
+       }
+     };
+   }, []);
+
    return (
       <section className="blc-about">
-         <div className="container">
+         <div className="container z-index-1 position-relative">
             <div className="row align-items-center">
                <div className="col-lg-6">
                   <div className="z-index-1 blc-about__img pos-rel text-center">
-                     <img src="/assets/img/about/about_shape1.png" alt="" />
-                     <div className="shape shape--1">
-                        <div data-parallax='{"y" : 60}'>
-                           <img src="/assets/img/about/about_shape2.png" alt="" />
-                        </div>
-                     </div>
-                     <div className="shape shape--2">
-                        <div data-parallax='{"y" : -60}'>
-                           <img src="/assets/img/about/about_shape3.png" alt="" />
-                        </div>
-                     </div>
-                     <div className="icon">
-                        <img src="/assets/img/icon/syber_icon.svg" alt="" />
+                     <div className="p-5">
+                        <img src="/assets/img/intro/ai-agents.gif" />
                      </div>
                   </div>
                </div>
@@ -35,6 +63,19 @@ const Intro = () => {
                   </div>
                </div>
             </div>
+         </div>
+         <div className="">
+         <video
+      ref={videoRef}
+      className="w-100"
+      autoPlay
+      muted
+      playsInline
+      controls={!isReversing} // disable controls during reverse
+    >
+            <source src="/assets/img/intro/IntroVideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+            </video>
          </div>
       </section>
    )
