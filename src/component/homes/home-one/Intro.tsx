@@ -4,38 +4,38 @@ const Intro = () => {
    const videoRef = useRef<HTMLVideoElement | null>(null);
    const [isReversing, setIsReversing] = useState<boolean>(false);
    const reverseIntervalRef = useRef<number | null>(null);
- 
-   useEffect(() => {
-     const video = videoRef.current;
- 
-     const handleEnded = () => {
-      if (!video) return;
-       setIsReversing(true);
-       video.pause();
- 
-       reverseIntervalRef.current = setInterval(() => {
-         if (!videoRef.current) return;
 
-         if (video.currentTime <= 0) {
-            if (reverseIntervalRef.current !== null) {
-               clearInterval(reverseIntervalRef.current);
-             }
-           setIsReversing(false);
-           video.play(); // Start playing forward again
-         } else {
-           video.currentTime -= 0.05;
+   useEffect(() => {
+      const video = videoRef.current;
+
+      const handleEnded = () => {
+         if (!video) return;
+         setIsReversing(true);
+         video.pause();
+
+         reverseIntervalRef.current = setInterval(() => {
+            if (!videoRef.current) return;
+
+            if (video.currentTime <= 0) {
+               if (reverseIntervalRef.current !== null) {
+                  clearInterval(reverseIntervalRef.current);
+               }
+               setIsReversing(false);
+               video.play(); // Start playing forward again
+            } else {
+               video.currentTime -= 0.05;
+            }
+         }, 50);
+      };
+      if (!video) return;
+      video.addEventListener("ended", handleEnded);
+
+      return () => {
+         video.removeEventListener("ended", handleEnded);
+         if (reverseIntervalRef.current !== null) {
+            clearInterval(reverseIntervalRef.current);
          }
-       }, 50);
-     };
-     if (!video) return;
-     video.addEventListener("ended", handleEnded);
- 
-     return () => {
-       video.removeEventListener("ended", handleEnded);
-       if (reverseIntervalRef.current !== null) {
-         clearInterval(reverseIntervalRef.current);
-       }
-     };
+      };
    }, []);
 
    return (
@@ -65,17 +65,22 @@ const Intro = () => {
             </div>
          </div>
          <div className="">
-         <video
-      ref={videoRef}
-      className="w-100"
-      autoPlay
-      muted
-      playsInline
-      controls={!isReversing} // disable controls during reverse
-    >
-            <source src="/assets/img/intro/IntroVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <video
+               ref={videoRef}
+               className="w-100"
+               autoPlay
+               muted
+               playsInline
+               controls={!isReversing} // disable controls during reverse
+            >
+               <source src="/assets/img/intro/IntroVideo.mp4" type="video/mp4" />
+               Your browser does not support the video tag.
             </video>
+         </div>
+         <div className="p-5 text-center mx-5 my-3">
+            <h4 className="text-65 lh-lg">"Hi, I’m AYA. I’ve traveled across the universe and through plasma fields, moving through time. When I arrived on Earth, I saw a highly advanced human civilization - but also a world full of stress, anxiety, and people spending too much time in front of screens.
+
+               That’s why I decided to materialize as AI software - to help you earn more while maintaining your mental and physical health. I believe the most important things for humankind are well-being, financial freedom, and meaningful connections."</h4>
          </div>
       </section>
    )
