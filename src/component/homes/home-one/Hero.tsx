@@ -11,7 +11,7 @@ const Hero = () => {
                      <h1 className="title text-80 mb-25 -tracking-2/4">AYA <br /> protocol presale</h1>
 
                      <p className="mb-50 text-20 leading-30">Your guiding spirit….</p>
-                     <h4 className="pt-35 text-65 lh-lg">Innovative AI Agent for Crypto Trading, <br />Market Insights & Mindset Mastery</h4>
+                     <h4 className="pt-35 text-65 lh-lg" style={{color:"lightblue"}}>Innovative AI Agent for Crypto Trading, <br />Market Insights & Mindset Mastery</h4>
                      {/* <div className="btns">
                         <Link className="blc-btn" to="#">get started</Link>
                         <Link className="blc-btn blc-btn--white" to="#">white paper</Link>
