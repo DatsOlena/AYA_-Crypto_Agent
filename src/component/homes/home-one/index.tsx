@@ -18,8 +18,8 @@ const HomeOne = () => {
         <Header />
         <Hero />
         <Intro />
-        <UserOption />
         <About />
+        <UserOption />
         <Solution />
         <Token />
         <Distribution />
