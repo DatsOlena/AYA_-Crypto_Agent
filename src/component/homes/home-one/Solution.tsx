@@ -9,26 +9,26 @@ const solution_data: DataType[] = [
    {
       id: 1,
       icon: "/assets/img/icon/s_01.svg",
-      title: "Blockchain Protocol Support",
-      desc: "Our supports different blockchain protocols, such as Ethereum",
+      title: "Don’t Miss THIS Anymore!",
+      desc: "Inspired by the recent hype around tokens like $TRUMP, we don’t want you to miss the next big opportunity. AYA monitors Twitter accounts of key influencers and whales in real-time, so you can react within seconds.",
    },
    {
       id: 2,
-      icon: "/assets/img/icon/s_02.svg",
-      title: "Analytics and Monitoring",
+      icon: "/assets/img/icon/s_04.svg",
+      title: "VIP Crypto Signals",
       desc: "Comprehensive analytics and monitoring tools are included",
    },
    {
       id: 3,
       icon: "/assets/img/icon/s_03.svg",
-      title: "Security Measures",
-      desc: "Robust security features and cryptographic protocols",
+      title: "Automated Twitter Growth",
+      desc: "AYA automatically posts content on Twitter, building its own online personality to attract attention and increase liquidity for the ecosystem.",
    },
    {
       id: 4,
-      icon: "/assets/img/icon/s_04.svg",
-      title: "Governance Mechanisms",
-      desc: "Some platforms provide built-in governance features",
+      icon: "/assets/img/icon/s_02.svg",
+      title: "More Features Coming Soon...",
+      desc: "Join our community and be part of the presale to access exclusive features. We are preparing for a strong launch, and early adopters will benefit the most!",
    },
 ];
 
@@ -40,8 +40,7 @@ const Solution = () => {
                <div className="col-lg-6">
                   <div className="solution__content">
                      <div className="sec-title style2 mb-60">
-                        <h2 className="sec-title__title text-50 mb-25">Our Best Blockchain <br /> Solution Platform</h2>
-                        <p>A blockchain solution platform is a comprehensive software or <br /> infrastructure that enables businesses and developers to build,</p>
+                        <h2 className="sec-title__title text-50 mb-25">AYA’s First Functionalities</h2>
                      </div>
                      <ul className="solution__list list-unstyled">
                         {solution_data.map((item) => (
@@ -58,27 +57,7 @@ const Solution = () => {
                </div>
                <div className="col-lg-6">
                   <div className="solution__img pos-rel">
-                     <img src="/assets/img/shape/s_circle_1.png" alt="" />
-                     <div className="solution__img-sml">
-                        <div className="circle circle--1">
-                           <div data-parallax='{"x" : -60}'>
-                              <img src="/assets/img/shape/s_circle_1.png" alt="" />
-                           </div>
-                        </div>
-                        <div className="circle circle--2">
-                           <div data-parallax='{"x" : 60}'>
-                              <img src="/assets/img/shape/s_circle_1.png" alt="" />
-                           </div>
-                        </div>
-                        <div className="circle circle--3">
-                           <div data-parallax='{"y" : -60}'>
-                              <img src="/assets/img/shape/s_circle_1.png" alt="" />
-                           </div>
-                        </div>
-                     </div>
-                     <div className="solution__icon">
-                        <img src="/assets/img/icon/s_icon.png" alt="" />
-                     </div>
+                     <img src="/assets/img/solution/ai-agent-performance.gif" alt="" />
                   </div>
                </div>
             </div>
