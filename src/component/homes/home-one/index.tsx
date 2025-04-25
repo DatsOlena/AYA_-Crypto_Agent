@@ -10,6 +10,7 @@ import Solution from "./Solution"
 import Token from "./Token"
 import UserOption from "./UserOption"
 import Intro from "./Intro"
+import Lore from "./Lore"
 
 const HomeOne = () => {
   return (
@@ -19,8 +20,9 @@ const HomeOne = () => {
         <Hero />
         <Intro />
         <About />
-        <UserOption />
+        <Lore />
         <Solution />
+        <UserOption />
         <Token />
         <Distribution />
         <Roadmap />
