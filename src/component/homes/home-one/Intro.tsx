@@ -77,7 +77,7 @@ const Intro = () => {
                Your browser does not support the video tag.
             </video>
          </div>
-         <div className="p-5 text-center mx-5 my-3">
+         <div className="p-5 text-center mx-md-5 my-3">
             <h4 className="text-65 lh-lg">"Hi, I’m AYA. I’ve traveled across the universe and through plasma fields, moving through time. When I arrived on Earth, I saw a highly advanced human civilization - but also a world full of stress, anxiety, and people spending too much time in front of screens.
 
                That’s why I decided to materialize as AI software - to help you earn more while maintaining your mental and physical health. I believe the most important things for humankind are well-being, financial freedom, and meaningful connections."</h4>
