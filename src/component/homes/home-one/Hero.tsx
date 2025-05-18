@@ -20,7 +20,7 @@ const Hero = () => {
                </div>
                <div className="col-lg-5">
                   <div className="blockchain-hero__img position-absolute top-0 end-0 z-0">
-                     <img src="/assets/img/bg/aya.png" alt="aya" className="w-full h-full" />
+                     <img src="/assets/img/logo/aya.logo5.png" alt="aya" className="w-full h-full" />
                   </div>
                   {/* <div className="hero__blockchain-icon pos-rel">
                      <div className="icon ul_li icon--1 absolute">

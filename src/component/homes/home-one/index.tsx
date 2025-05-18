@@ -22,7 +22,6 @@ const HomeOne = () => {
         <About />
         <Lore />
         <Solution />
-        <UserOption />
         <Token />
         <Distribution />
         <Roadmap />

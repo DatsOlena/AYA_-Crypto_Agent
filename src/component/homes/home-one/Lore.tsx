@@ -1,10 +1,10 @@
 const Lore = () => {
     return (
-        <section className="solution pt-10 pb-70 p-relative z-index-1">
+        <section className="solution pt-35 pb-70 p-relative z-index-1">
 
-            <div className="">
+            {/* <div className="">
                 <img src="/assets/img/solution/artificial-intelligence.jpg" className="w-100 h-auto" style={{ maxHeight: '800px' }}></img>
-            </div>
+            </div> */}
             <div className="container">
                         <div className="solution__content">
                             <div className="sec-title style2 mb-60 mt-5 text-center">

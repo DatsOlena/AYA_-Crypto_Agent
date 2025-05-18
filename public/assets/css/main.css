@@ -3353,6 +3353,10 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     .hero__blockchain {
       padding-top: 130px;
       min-height: 800px; } }
+  @media (max-width: 520px) {
+    .hero__blockchain {
+      padding-top: 130px;
+      min-height: 600px; } }
 .hero__bg {
   background-position: center 250px;
   position: absolute;
